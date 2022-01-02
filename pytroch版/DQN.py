@@ -31,7 +31,7 @@ class Net (nn.Module):
 
 # 定义DQN类 (定义两个网络)
 class DQN (object):
-    def __init__(self, N_STATES=2,N_ACTIONS=4,learning_rate=0.005,GAMMA=0.6,MEMORY_SIZE=4000,BATCH_SIZE=32,TARGET_REPLACE_ITER = 200,e_greedy=0.9, e_greedy_increment=None ):  # 定义DQN的一系列属性  无默认值的参数放前 有默认值的参数放后
+    def __init__(self, N_STATES=2,N_ACTIONS=4,learning_rate=0.005,GAMMA=0.6,MEMORY_SIZE=2000,BATCH_SIZE=32,TARGET_REPLACE_ITER = 200,e_greedy=0.9, e_greedy_increment=None ):  # 定义DQN的一系列属性  无默认值的参数放前 有默认值的参数放后
         self.N_STATES=N_STATES  #状态空间维数
         self.N_ACTIONS=N_ACTIONS   #动作个数  ,动作永远编号为1维，所以注意后面存入经验池和取出的数据格式
         self.lr=learning_rate   #学习率
